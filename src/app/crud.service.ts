@@ -11,7 +11,7 @@ export class CrudService {
   constructor(private http: HttpClient) { }
 
   public getpublicdata(): Observable<any> {
-    return this.http.get("http://34.29.161.0:28962/api/User/Public", { responseType: 'text' }).pipe(
+    return this.http.get("https://emp-service-xgmuco3q5a-ue.a.run.app/api/User/Public", { responseType: 'text' }).pipe(
       catchError(this.handleError)
     );
   }

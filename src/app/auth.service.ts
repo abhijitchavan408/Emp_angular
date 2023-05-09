@@ -11,7 +11,7 @@ export class AuthService {
   errorMsg: any;
   constructor(private http: HttpClient) { }
   login(data: any): Observable<any> {
-    return this.http.post("http://35.238.234.251:8081/api/Auth/Auth", data, { responseType: 'json' }).pipe(
+    return this.http.post("https://poc6-abhijit-auth-xgmuco3q5a-ue.a.run.app/api/Auth/Auth", data, { responseType: 'json' }).pipe(
       catchError(error => {
         this.errorMsg = error.message;
         return of([this.getServerErrorMessage]);
